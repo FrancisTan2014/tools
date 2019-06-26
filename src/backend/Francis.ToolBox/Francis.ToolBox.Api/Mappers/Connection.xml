@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SmartSqlMap Scope="Connection"  xmlns="http://SmartSql.net/schemas/SmartSqlMap.xsd">
+  <Caches>
+    <Cache Id="ConnectionCache" Type="Lru">
+      <FlushInterval Hours="1"/>
+    </Cache>
+  </Caches>
+  <Statements>
+
+    <!-- 字段 -->
+    <Statement Id="Fields">
+      `Id`, `Name`, `Host`, `Port`, `Username`, `Password`, `CreatedAt`, `Deleted`
+    </Statement>
+    
+    <!-- 新增 -->
+    <Statement Id="Insert">
+      INSERT INTO
+        `Connection`
+        (
+          `Name`, `Host`, `Port`, `Username`, `Password`
+        )
+      VALUES
+        (
+          ?Name, ?Host, ?Port, ?Username, ?Password
+        )
+      ;
+      SELECT LAST_INSERT_ID();
+    </Statement>
+
+    <!-- 更新 -->
+    <Statement Id="Update">
+      UPDATE
+        `Connection`
+      <Set>
+        <IsNotEmpty Prepend="," Property="Name">
+          `Name`=?Name
+        </IsNotEmpty>
+        <IsNotEmpty Prepend="," Property="Host">
+          `Host`=?Host
+        </IsNotEmpty>
+        <IsNotEmpty Prepend="," Property="Port">
+          `Port`=?Port
+        </IsNotEmpty>
+        <IsNotEmpty Prepend="," Property="Username">
+          `Username`=?Username
+        </IsNotEmpty>
+        <IsNotEmpty Prepend="," Property="Password">
+          `Password`=?Password
+        </IsNotEmpty>
+      </Set>
+      WHERE
+        `Id`=?Id
+      ;
+    </Statement>
+    
+    <!-- 删除 -->
+    <Statement Id="Delete">
+      UPDATE
+        `Connection`
+      SET
+        `Deleted`=1
+      WHERE
+        `Id`=?id
+      ;
+    </Statement>
+    
+    <!-- 查询所有未删除的数据 -->
+    <Statement Id="QueryAll">
+      SELECT
+        <Include RefId="Fields"></Include>
+      FROM
+        `Connection`
+      WHERE
+        `Deleted`=0
+      ;
+    </Statement>
+    
+  </Statements>
+</SmartSqlMap>
+
+

@@ -1,0 +1,16 @@
+E:\personal-project\tool-box\src\backend\Francis.ToolBox\Francis.ToolBox.Api\bin\Debug\netcoreapp2.2\SmartSqlMapConfig.xml
+E:\personal-project\tool-box\src\backend\Francis.ToolBox\Francis.ToolBox.Api\bin\Debug\netcoreapp2.2\Francis.ToolBox.Api.deps.json
+E:\personal-project\tool-box\src\backend\Francis.ToolBox\Francis.ToolBox.Api\bin\Debug\netcoreapp2.2\Francis.ToolBox.Api.runtimeconfig.json
+E:\personal-project\tool-box\src\backend\Francis.ToolBox\Francis.ToolBox.Api\bin\Debug\netcoreapp2.2\Francis.ToolBox.Api.runtimeconfig.dev.json
+E:\personal-project\tool-box\src\backend\Francis.ToolBox\Francis.ToolBox.Api\bin\Debug\netcoreapp2.2\Francis.ToolBox.Api.dll
+E:\personal-project\tool-box\src\backend\Francis.ToolBox\Francis.ToolBox.Api\obj\Debug\netcoreapp2.2\Francis.ToolBox.Api.csprojAssemblyReference.cache
+E:\personal-project\tool-box\src\backend\Francis.ToolBox\Francis.ToolBox.Api\obj\Debug\netcoreapp2.2\Francis.ToolBox.Api.csproj.CoreCompileInputs.cache
+E:\personal-project\tool-box\src\backend\Francis.ToolBox\Francis.ToolBox.Api\obj\Debug\netcoreapp2.2\Francis.ToolBox.Api.RazorAssemblyInfo.cache
+E:\personal-project\tool-box\src\backend\Francis.ToolBox\Francis.ToolBox.Api\obj\Debug\netcoreapp2.2\Francis.ToolBox.Api.RazorAssemblyInfo.cs
+E:\personal-project\tool-box\src\backend\Francis.ToolBox\Francis.ToolBox.Api\obj\Debug\netcoreapp2.2\Francis.ToolBox.Api.AssemblyInfoInputs.cache
+E:\personal-project\tool-box\src\backend\Francis.ToolBox\Francis.ToolBox.Api\obj\Debug\netcoreapp2.2\Francis.ToolBox.Api.AssemblyInfo.cs
+E:\personal-project\tool-box\src\backend\Francis.ToolBox\Francis.ToolBox.Api\obj\Debug\netcoreapp2.2\Francis.ToolBox.Api.RazorTargetAssemblyInfo.cache
+E:\personal-project\tool-box\src\backend\Francis.ToolBox\Francis.ToolBox.Api\bin\Debug\netcoreapp2.2\Francis.ToolBox.Api.pdb
+E:\personal-project\tool-box\src\backend\Francis.ToolBox\Francis.ToolBox.Api\obj\Debug\netcoreapp2.2\Francis.ToolBox.Api.dll
+E:\personal-project\tool-box\src\backend\Francis.ToolBox\Francis.ToolBox.Api\obj\Debug\netcoreapp2.2\Francis.ToolBox.Api.pdb
+E:\personal-project\tool-box\src\backend\Francis.ToolBox\Francis.ToolBox.Api\bin\Debug\netcoreapp2.2\Mappers\Connection.xml
