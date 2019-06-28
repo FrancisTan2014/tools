@@ -10,13 +10,16 @@
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
     <PackageReference Include="MySql.Data" Version="8.0.16" />
-    <PackageReference Include="SmartSql" Version="4.0.65" />
-    <PackageReference Include="SmartSql.AOP" Version="4.0.65" />
-    <PackageReference Include="SmartSql.DIExtension" Version="4.0.65" />
-    <PackageReference Include="SmartSql.DyRepository" Version="4.0.65" />
-    <PackageReference Include="SmartSql.Schema" Version="4.0.65" />
-    <PackageReference Include="SmartSql.TypeHandler" Version="4.0.65" />
     <PackageReference Include="Util.Core" Version="1.8.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\open-source-lib\net-core\SmartSql\src\SmartSql.AOP\SmartSql.AOP.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\open-source-lib\net-core\SmartSql\src\SmartSql.DIExtension\SmartSql.DIExtension.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\open-source-lib\net-core\SmartSql\src\SmartSql.DyRepository\SmartSql.DyRepository.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\open-source-lib\net-core\SmartSql\src\SmartSql.TypeHandler\SmartSql.TypeHandler.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\open-source-lib\net-core\SmartSql\src\SmartSql\SmartSql.csproj" />
+    <ProjectReference Include="..\Francis.ToolBox.Abstractions\Francis.ToolBox.Abstractions.csproj" />
   </ItemGroup>
 
   <ItemGroup>

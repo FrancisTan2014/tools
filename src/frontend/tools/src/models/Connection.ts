@@ -4,6 +4,7 @@
 export class Connection {
     id: number = 0
     name: string = ''
+    type: number | string = ''
     host: string = ''
     port: string = ''
     username: string = ''

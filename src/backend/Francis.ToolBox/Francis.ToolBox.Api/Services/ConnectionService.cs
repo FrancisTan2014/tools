@@ -32,5 +32,10 @@ namespace Francis.ToolBox.Api.Services
         {
             return _connectionRepository.QueryAll() ?? new List<Connection>();
         }
+
+        public Connection QuerySingle(int id)
+        {
+            return _connectionRepository.QuerySingle(id);
+        }
     }
 }

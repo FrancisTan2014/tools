@@ -5,11 +5,12 @@
       <FlushInterval Hours="1"/>
     </Cache>
   </Caches>
+  
   <Statements>
 
     <!-- 字段 -->
     <Statement Id="Fields">
-      `Id`, `Name`, `Host`, `Port`, `Username`, `Password`, `CreatedAt`, `Deleted`
+      `Id`, `Name`, `Host`, `DbType`, `Port`, `Username`, `Password`, `CreatedAt`, `Deleted`
     </Statement>
     
     <!-- 新增 -->
@@ -17,11 +18,11 @@
       INSERT INTO
         `Connection`
         (
-          `Name`, `Host`, `Port`, `Username`, `Password`
+          `Name`, `Host`, `DbType`, `Port`, `Username`, `Password`
         )
       VALUES
         (
-          ?Name, ?Host, ?Port, ?Username, ?Password
+          ?Name, ?Host, ?DbType, ?Port, ?Username, ?Password
         )
       ;
       SELECT LAST_INSERT_ID();
@@ -37,6 +38,9 @@
         </IsNotEmpty>
         <IsNotEmpty Prepend="," Property="Host">
           `Host`=?Host
+        </IsNotEmpty>
+        <IsNotEmpty Prepend="," Property="DbType">
+          `DbType`=?DbType
         </IsNotEmpty>
         <IsNotEmpty Prepend="," Property="Port">
           `Port`=?Port
@@ -72,6 +76,17 @@
         `Connection`
       WHERE
         `Deleted`=0
+      ;
+    </Statement>
+
+    <!-- 查询单条数据 -->
+    <Statement Id="QuerySingle">
+      SELECT
+        <Include RefId="Fields"></Include>
+      FROM
+        `Connection`
+      WHERE
+        `Id`=?id
       ;
     </Statement>
     

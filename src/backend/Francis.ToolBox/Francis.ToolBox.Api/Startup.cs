@@ -1,11 +1,14 @@
 ﻿using AspectCore.Extensions.DependencyInjection;
 using Francis.ToolBox.Api.Constants;
+using Francis.ToolBox.Api.Factories;
+using Francis.ToolBox.Api.SqlProviders;
 using Francis.ToolBox.Extenssions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using SmartSql;
 using System;
 
 namespace Francis.ToolBox.Api
@@ -26,12 +29,17 @@ namespace Francis.ToolBox.Api
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services
-                .AddSmartSql()
+                .AddSmartSql(builder =>
+                {
+                    builder.UseAlias(SmartSqlBuilder.DEFAULT_ALIAS);
+                })
                 .AddRepositoryFromAssembly(opts => {
                     opts.AssemblyString = Names.REPOSITORY_ASSEMBLY_NAME;
                     opts.Filter = (type) => type.Name.EndsWith("Repository");
                 });
-            services.RegisterServices(Names.SERVICE_ASSEMBLY_NAME, type => type.Name.EndsWith("Service"));
+            services.RegisterServices(Names.SERVICE_ASSEMBLY_NAME, type => type.Name.EndsWith("Service"))
+                .AddSingleton<SmartSqlBuilderFactory>()
+                .AddSingleton<ISqlProviderFactory, SqlProviderFactory>();
 
             services.AddCors(
                 options => options.AddPolicy(

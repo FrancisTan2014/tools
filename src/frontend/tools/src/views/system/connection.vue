@@ -3,7 +3,7 @@
 
         <div class="app-header">
             <h2 class="title">
-                <span>数据库连接</span>
+                <span>数据库连接管理</span>
                 <el-button type="primary" icon="el-icon-plus" size="medium" class="fr" @click="onNewClick">New</el-button>
             </h2>
         </div>
@@ -12,6 +12,11 @@
             <el-table :data="connections" border :loading="loading">
               <el-table-column label="编号" prop="id"></el-table-column>
               <el-table-column label="名称" prop="name"></el-table-column>
+              <el-table-column label="类型">
+                  <template slot-scope="scope">
+                      <span>{{ getTypeName(scope.row.dbType) }}</span>
+                  </template>
+              </el-table-column>
               <el-table-column label="主机" prop="host"></el-table-column>
               <el-table-column label="端口号" prop="port"></el-table-column>
               <el-table-column label="用户名" prop="username"></el-table-column>
@@ -34,6 +39,11 @@
             <el-form ref="editForm" :model="editModel" :rules="rules" label-position="right" label-width="120px">
               <el-form-item label="连接名称：" prop="name">
                   <el-input v-model="editModel.name" placeholder="请输入连接名称"></el-input>
+              </el-form-item>
+              <el-form-item label="数据库类型：" prop="dbTypes">
+                  <el-select v-model="editModel.dbType" placeholder="请选择">
+                    <el-option v-for="type in dbTypes" :key="type.key" :label="type.key" :value="type.value"></el-option>
+                  </el-select>
               </el-form-item>
               <el-form-item label="主机地址：" prop="host">
                   <el-input v-model="editModel.host" placeholder="请输入 IP 地址"></el-input>
@@ -61,16 +71,20 @@
 <script lang="ts">
 
 import { Vue, Component, Model } from 'vue-property-decorator'
-import { ConnectionService } from '@/services'
-import { Connection as ConnectionModel, ValidatorRule } from '@/models'
+import { ConnectionService, CommonService } from '@/services'
+import { Connection as ConnectionModel, ValidatorRule, KeyValue } from '@/models'
 import { Form } from 'element-ui';
 
 @Component({
-    name: 'Connection'
+    name: 'Connection',
+    filters: {
+        
+    }
 })
 export default class Connection extends Vue {
     
-    private connectionService: ConnectionService = new ConnectionService()
+    private readonly connectionService: ConnectionService = new ConnectionService()
+    private readonly commonService: CommonService = new CommonService()
 
     // booleans
     loading: boolean = false
@@ -78,6 +92,7 @@ export default class Connection extends Vue {
     saving: boolean = false
 
     connections: ConnectionModel[] = []
+    dbTypes: KeyValue[] = []
     editModel: ConnectionModel = new ConnectionModel()
     rules = {
         name: ValidatorRule.createRequired('请输入连接名称'),
@@ -101,6 +116,7 @@ export default class Connection extends Vue {
 
     created() {
         this.loadData()
+        this.loadDbTypes()
     }
 
     async loadData() {
@@ -108,6 +124,12 @@ export default class Connection extends Vue {
         const response = await this.connectionService.getList()
         this.connections = response.data
         this.$ajaxDone(this, 'loading')
+    }
+
+    async loadDbTypes() {
+        const response = await this.commonService.getDatabaseTypes()
+        this.dbTypes = response.data
+        this.$log('after db types loaded', this.dbTypes)
     }
 
     // 点击 New 按钮
@@ -154,6 +176,14 @@ export default class Connection extends Vue {
                     this.$error('删除失败，请稍后重试')
                 }
             }).catch(() => {})
+    }
+
+    getTypeName(type: number) {
+        const res = this.dbTypes.find(item => item.value == type)
+        if (res === undefined) {
+            throw new Error(`cannot find type(${type}) from this.dbTypes `)
+        }
+        return res.key
     }
 
 }

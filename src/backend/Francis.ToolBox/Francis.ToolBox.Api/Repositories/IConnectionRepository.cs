@@ -9,5 +9,6 @@ namespace Francis.ToolBox.Api.Repositories
         bool Update(Connection connection);
         bool Delete(int id);
         List<Connection> QueryAll();
+        Connection QuerySingle(int id);
     }
 }
