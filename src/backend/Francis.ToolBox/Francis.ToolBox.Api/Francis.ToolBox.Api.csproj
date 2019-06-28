@@ -16,16 +16,14 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\..\..\open-source-lib\net-core\SmartSql\src\SmartSql.AOP\SmartSql.AOP.csproj" />
     <ProjectReference Include="..\..\..\..\..\..\open-source-lib\net-core\SmartSql\src\SmartSql.DIExtension\SmartSql.DIExtension.csproj" />
-    <ProjectReference Include="..\..\..\..\..\..\open-source-lib\net-core\SmartSql\src\SmartSql.DyRepository\SmartSql.DyRepository.csproj" />
-    <ProjectReference Include="..\..\..\..\..\..\open-source-lib\net-core\SmartSql\src\SmartSql.TypeHandler\SmartSql.TypeHandler.csproj" />
-    <ProjectReference Include="..\..\..\..\..\..\open-source-lib\net-core\SmartSql\src\SmartSql\SmartSql.csproj" />
     <ProjectReference Include="..\Francis.ToolBox.Abstractions\Francis.ToolBox.Abstractions.csproj" />
+    <ProjectReference Include="..\Francis.ToolBox.Common\Francis.ToolBox.Common.csproj" />
+    <ProjectReference Include="..\Francis.ToolBox.Entities\Francis.ToolBox.Entities.csproj" />
+    <ProjectReference Include="..\Francis.ToolBox.Repositories\Francis.ToolBox.Repositories.csproj" />
+    <ProjectReference Include="..\Francis.ToolBox.Services\Francis.ToolBox.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Mappers\Connection.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="SmartSqlMapConfig.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\open-source-lib\net-core\SmartSql\src\SmartSql.AOP\SmartSql.AOP.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\open-source-lib\net-core\SmartSql\src\SmartSql.DyRepository\SmartSql.DyRepository.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\open-source-lib\net-core\SmartSql\src\SmartSql.TypeHandler\SmartSql.TypeHandler.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\open-source-lib\net-core\SmartSql\src\SmartSql\SmartSql.csproj" />
+    <ProjectReference Include="..\Francis.ToolBox.Abstractions\Francis.ToolBox.Abstractions.csproj" />
+    <ProjectReference Include="..\Francis.ToolBox.Common\Francis.ToolBox.Common.csproj" />
+    <ProjectReference Include="..\Francis.ToolBox.Entities\Francis.ToolBox.Entities.csproj" />
+    <ProjectReference Include="..\Francis.ToolBox.Repositories\Francis.ToolBox.Repositories.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,8 +1,8 @@
 ﻿using AspectCore.Extensions.DependencyInjection;
 using Francis.ToolBox.Api.Constants;
-using Francis.ToolBox.Api.Factories;
-using Francis.ToolBox.Api.SqlProviders;
-using Francis.ToolBox.Extenssions;
+using Francis.ToolBox.Factories;
+using Francis.ToolBox.SqlProviders;
+using Francis.ToolBox.Services.Extenssions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;

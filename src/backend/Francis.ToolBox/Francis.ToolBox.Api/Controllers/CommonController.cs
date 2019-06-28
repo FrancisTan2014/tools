@@ -1,5 +1,5 @@
 ﻿using Francis.ToolBox.Api.Dto.Response;
-using Francis.ToolBox.Api.Entities;
+using Francis.ToolBox.Entities;
 using Francis.ToolBox.Api.Utils.Helpers;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;

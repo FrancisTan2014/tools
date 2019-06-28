@@ -17,6 +17,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartSql.DIExtension", "..\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartSql.TypeHandler", "..\..\..\..\..\open-source-lib\net-core\SmartSql\src\SmartSql.TypeHandler\SmartSql.TypeHandler.csproj", "{04CAE522-523D-476E-8DCD-54F26A7B920C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Francis.ToolBox.Entities", "Francis.ToolBox.Entities\Francis.ToolBox.Entities.csproj", "{F188918A-336F-4F56-831B-D5AC32715667}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Francis.ToolBox.Services", "Francis.ToolBox.Services\Francis.ToolBox.Services.csproj", "{45A2226D-53CF-4C4D-B9F0-0FB363D698BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Francis.ToolBox.Repositories", "Francis.ToolBox.Repositories\Francis.ToolBox.Repositories.csproj", "{9CC755A2-B8F0-4C92-98C3-F3CA0C48C64E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Francis.ToolBox.Common", "Francis.ToolBox.Common\Francis.ToolBox.Common.csproj", "{B150DE0A-9F73-4EA9-9D2D-1DF596BE39C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Francis.ToolBox.CodeGenerator", "Francis.ToolBox.CodeGenerator\Francis.ToolBox.CodeGenerator.csproj", "{C36C2256-175E-4725-B354-299CC25B1B6F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +61,26 @@ Global
 		{04CAE522-523D-476E-8DCD-54F26A7B920C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04CAE522-523D-476E-8DCD-54F26A7B920C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04CAE522-523D-476E-8DCD-54F26A7B920C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F188918A-336F-4F56-831B-D5AC32715667}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F188918A-336F-4F56-831B-D5AC32715667}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F188918A-336F-4F56-831B-D5AC32715667}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F188918A-336F-4F56-831B-D5AC32715667}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45A2226D-53CF-4C4D-B9F0-0FB363D698BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45A2226D-53CF-4C4D-B9F0-0FB363D698BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45A2226D-53CF-4C4D-B9F0-0FB363D698BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45A2226D-53CF-4C4D-B9F0-0FB363D698BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CC755A2-B8F0-4C92-98C3-F3CA0C48C64E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CC755A2-B8F0-4C92-98C3-F3CA0C48C64E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CC755A2-B8F0-4C92-98C3-F3CA0C48C64E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CC755A2-B8F0-4C92-98C3-F3CA0C48C64E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B150DE0A-9F73-4EA9-9D2D-1DF596BE39C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B150DE0A-9F73-4EA9-9D2D-1DF596BE39C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B150DE0A-9F73-4EA9-9D2D-1DF596BE39C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B150DE0A-9F73-4EA9-9D2D-1DF596BE39C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C36C2256-175E-4725-B354-299CC25B1B6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C36C2256-175E-4725-B354-299CC25B1B6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C36C2256-175E-4725-B354-299CC25B1B6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C36C2256-175E-4725-B354-299CC25B1B6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

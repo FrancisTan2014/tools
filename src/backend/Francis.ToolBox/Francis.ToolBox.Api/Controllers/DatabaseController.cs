@@ -1,7 +1,7 @@
 ﻿using Francis.ToolBox.Api.Dto.Request;
-using Francis.ToolBox.Api.Factories;
-using Francis.ToolBox.Api.Services;
-using Francis.ToolBox.Api.SqlProviders;
+using Francis.ToolBox.Factories;
+using Francis.ToolBox.Services;
+using Francis.ToolBox.SqlProviders;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;

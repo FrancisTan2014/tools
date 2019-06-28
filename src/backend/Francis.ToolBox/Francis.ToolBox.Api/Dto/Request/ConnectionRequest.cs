@@ -1,4 +1,4 @@
-﻿using Francis.ToolBox.Api.Entities;
+﻿using Francis.ToolBox.Entities;
 using System.ComponentModel.DataAnnotations;
 
 namespace Francis.ToolBox.Api.Dto.Request

@@ -1,6 +1,6 @@
 ﻿using Francis.ToolBox.Api.Dto.Request;
-using Francis.ToolBox.Api.Entities;
-using Francis.ToolBox.Api.Services;
+using Francis.ToolBox.Entities;
+using Francis.ToolBox.Services;
 using Microsoft.AspNetCore.Mvc;
 using Util.Maps;
 
