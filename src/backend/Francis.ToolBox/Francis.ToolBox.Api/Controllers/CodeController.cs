@@ -16,13 +16,11 @@ namespace Francis.ToolBox.Api.Controllers
     {
         private readonly ILogger _logger;
         private readonly ICodeGenerator _codeGenerator;
-        private readonly IStringWriter _stringWriter;
 
-        public CodeController(ILogger<CodeController> logger, ICodeGenerator codeGenerator, IStringWriter stringWriter)
+        public CodeController(ILogger<CodeController> logger, ICodeGenerator codeGenerator)
         {
             _logger = logger;
             _codeGenerator = codeGenerator;
-            _stringWriter = stringWriter;
         }
 
         public IActionResult GenerateEntityClass(
@@ -40,7 +38,6 @@ namespace Francis.ToolBox.Api.Controllers
             var dbService = DatabaseService.Create(factory, sqlProviderFactory, connection);
             var columns = dbService.ListColumns(request.TableName);
             var code = _codeGenerator.Execute(columns);
-            _stringWriter.Write(code);
             return Success(code);
         }
     }

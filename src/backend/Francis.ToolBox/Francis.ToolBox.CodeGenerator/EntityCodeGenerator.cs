@@ -7,7 +7,7 @@ namespace Francis.ToolBox.CodeGenerator
 {
     public class EntityCodeGenerator : ICodeGenerator
     {
-        public void Execute(IList<IColumnMeta> columns, IList<IStringWriter> writers)
+        public string Execute(IEnumerable<IColumnMeta> columns)
         {
             throw new NotImplementedException();
         }
